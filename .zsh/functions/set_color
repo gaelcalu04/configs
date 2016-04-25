@@ -1,0 +1,33 @@
+#!/bin/zsh
+
+if [[ "$TERM" =~ "xterm*" ]]; then
+    if [[ -n "$XTERM_VERSION" ]]; then
+        # xterm
+        COLORCOUNT="256"
+    else
+        if [[ $COLORTERM =~ "gnome-terminal" ]]; then
+            # gnome-terminal
+            COLORCOUNT="256"
+        else
+            # xterm compatible
+            COLORCOUNT="256"
+        fi
+    fi
+elif [[ "$TERM" =~ "fbterm*" ]]; then
+    # fbterm
+    COLORCOUNT=`tput colors`
+elif [[ "$TERM" =~ "linux*" ]]; then
+    # tty
+    COLORCOUNT="8"
+elif [[ "$TERM" =~ "rxvt*" ]]; then
+    # rxvt
+    COLORCOUNT=`tput colors`
+elif [[ "$TERM" =~ "screen*" ]]; then
+    # screen or tmux
+    COLORCOUNT="8"
+else
+    # unknown
+    COLORCOUNT="8"
+fi
+
+export COLORCOUNT
