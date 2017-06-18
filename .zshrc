@@ -225,8 +225,8 @@ setopt HIST_EXPIRE_DUPS_FIRST
 setopt HIST_FIND_NO_DUPS
 
 # Set Git options for different work environments
-export GIT_AUTHOR_NAME="Gael Porte"
-export GIT_AUTHOR_EMAIL="gporte@adeneo-embedded.com"
+export GIT_AUTHOR_NAME="Gaël Porté"
+export GIT_AUTHOR_EMAIL="porte.gael@hotmail.fr"
 
 alias emc="emacs"
 alias emt="emacs -nw"
