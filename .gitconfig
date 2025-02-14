@@ -1,6 +1,13 @@
 [alias]
 	s = status
 	slog = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	d = diff
+[diff]
+    tool = meld
+[difftool]
+    prompt = false
+[difftool "meld"]
+    cmd = meld "$LOCAL" "$REMOTE"
 [user]
 	name = Gael Porte
 	email = portegael.pro@gmail.com
