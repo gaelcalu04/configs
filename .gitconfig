@@ -11,3 +11,5 @@
 [user]
 	name = Gael Porte
 	email = portegael.pro@gmail.com
+[core]
+	editor = vim
